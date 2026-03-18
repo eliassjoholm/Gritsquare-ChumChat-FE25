@@ -106,6 +106,10 @@ nav {
     border: red solid 10px;
 }
 
+.message-area{
+    width: 100px;
+}
+
 .header-picture {
   display: flex;
   align-items: center;
