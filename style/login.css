@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #e6e0d8;
+}
+
+/* Centering container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Card */
+.register-card {
+  width: 350px;
+  background: #0fa36b;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Header */
+.header {
+  background: #7a7470;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.header h1 {
+  margin: 0;
+  font-weight: normal;
+}
+
+/* Form */
+.form-body {
+  padding: 30px;
+}
+
+/* Input group */
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  background: #cfcfcf;
+}
+
+.icon {
+  padding: 8px;
+  background: #dcdcdc;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  padding: 8px;
+  flex: 1;
+  background: transparent;
+}
+
+/* Button */
+.login-btn {
+  margin-top: 10px;
+  padding: 8px 20px;
+  background: #cfcfcf;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  display: block;
+}
