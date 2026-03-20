@@ -3,7 +3,7 @@ import { push, set, onValue, remove, ref, get } from "https://www.gstatic.com/fi
 import { RenderMessageBox } from "./RenderFunctions/RenderMessageBox.js";
 import { RenderMessages } from "./RenderFunctions/RenderMessages.js"
 
-onValue(reference, snapshot => {
+const hello = onValue(reference, snapshot => {
     const data = snapshot.val();
 
     document.querySelector(".chat-container").innerHTML = "";  
@@ -13,6 +13,10 @@ onValue(reference, snapshot => {
 
     RenderMessages(users, messages)
     console.log(messages)
+})
+
+onValue(messagesRef, snapshot => {
+    hello();
 })
 
 // onValue(messagesRef, snapshot => {

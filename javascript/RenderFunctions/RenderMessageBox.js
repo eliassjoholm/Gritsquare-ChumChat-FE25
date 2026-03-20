@@ -7,6 +7,16 @@ export const RenderMessageBox = (sender, message, messageKey) => {
     const ChatBox = document.createElement("div");
     ChatBox.className = "chat-box"
 
+    const ChatBoxSender = document.createElement("h2");
+    ChatBoxSender.textContent = sender.username;
+    ChatBoxSender.className = 'chat-box-username'
+
+    const ChatboxImg = document.createElement('img')
+    ChatboxImg.className = 'chat-box-pfp'
+    ChatboxImg.src = sender.img;
+
+    ChatBox.append(ChatBoxSender, ChatboxImg)
+
     if(currentUser){
         if(currentUser.id === message.user_id){
             const ChatButtonDelete = document.createElement('button')
@@ -17,15 +27,11 @@ export const RenderMessageBox = (sender, message, messageKey) => {
                 console.log(`${message.message_id} getting clicked` )
                 deleteMessage(messageKey)
             })
+            ChatBox.appendChild(ChatButtonDelete)
         }
     }
 
-    const ChatboxImg = document.createElement('img')
-    ChatboxImg.className = 'header-picture'
 
-    const ChatBoxSender = document.createElement("h2");
-    ChatBoxSender.textContent = sender.username;
-    ChatBoxSender.className = 'header-picture'
 
     const ChatBoxMessage = document.createElement("p");
     console.log(message)
@@ -44,6 +50,6 @@ export const RenderMessageBox = (sender, message, messageKey) => {
     comments.placeholder = 'Reply...'
     comments.classList = 'actions'
 
-    ChatBox.append(ChatBoxSender, ChatBoxMessage, TimeStamp, ChatReply, comments);
+    ChatBox.append(ChatBoxMessage, TimeStamp, ChatReply, comments);
     ChatContainer.appendChild(ChatBox);
 }

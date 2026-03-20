@@ -1,6 +1,1 @@
 export let currentUser = null;
-
-
-
-
-
