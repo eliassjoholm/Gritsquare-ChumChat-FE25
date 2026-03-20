@@ -27,18 +27,18 @@
         <form class="form-body">
           <div class="input-group">
             <span class="icon">👤</span>
-            <input type="text" placeholder="USERNAME" class="inputDesign" required id="register-username"/>
+            <input type="text" name="username" placeholder="USERNAME" class="inputDesign" required id="register-username"/>
           </div>
 
           <div class="input-group">
             <span class="icon">🔒</span>
-            <input type="password" placeholder="PASSWORD" class="inputDesign" required id="register-password"/>
+            <input type="password" name="password" placeholder="PASSWORD" class="inputDesign" required id="register-password"/>
           </div>
 
           <div>
             
            <label for="image-url" class="placeHolderImg">Picture link</label>
-            <input type="url" placeholder="Enter image link" class="register-image"  required>
+            <input type="url" name="pfp-url" placeholder="Enter image link" class="register-image"  required>
           </div>
 
           <button type="submit" class="login-btn" id="register-button">REGISTER ME</button>
@@ -52,5 +52,6 @@
             <li><a href="">Contact</a></li>
         </ul>
     </footer>
+    <script type="module" src="../javascript/Auth/registerUser.js"></script>
   </body>
 </html>
