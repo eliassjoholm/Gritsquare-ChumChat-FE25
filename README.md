@@ -39,18 +39,6 @@ A simple real-time chat application where users can send messages to each other.
 
 ---
 
-## 📂 Project Structure
-
-```bash id="rx7f9c"
-chat-app/
- ├── client/        # Frontend
- ├── server/        # Backend
- ├── package.json
- └── README.md
-```
-
----
-
 ## 🛠️ Tech Stack
 
 * Frontend: (e.g. React / HTML / CSS / JavaScript)
@@ -64,9 +52,37 @@ chat-app/
 
 Pull requests are welcome!
 
-[Andreas](https://github.com/andi49) (PROJECT LEAD) 🚩
-[Eddie](https://github.com/eddiewn)
-[Jack](https://github.com/jackgustafsson)
+## 🤝 Contributing
+
+We welcome contributions! To keep the project organized, please follow these steps:
+
+1. **Read the README carefully** to understand the project structure, features, and guidelines.
+2. **Fork the repository** and create a new branch for your work:
+
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. **Make your changes** in your branch.
+4. **Commit your changes** with clear messages describing what you added or fixed:
+
+   ```bash
+   git commit -m "Add feature: description of what was added"
+   ```
+5. **Push your branch** to your forked repository:
+
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+6. **Open a Pull Request** to the main repository. Include:
+
+   * A short description of your changes
+   * What functionality was added
+   * Any notes or instructions if needed
+7. **Do not just comment in the PR** — all code changes must be included in the Pull Request.
+8. **After approval:** If your Pull Request is approved and merged, your name will be added under the **Contributing** section in the README. 🎉
+
+Following these steps ensures contributions are easy to review and gives proper credit to contributors. Thank you for helping improve ChumChat! 🚀
+
 
 ---
 
