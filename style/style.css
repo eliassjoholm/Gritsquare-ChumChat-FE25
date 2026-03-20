@@ -55,7 +55,10 @@ nav {
   display: flex;
   flex-direction: row;
   background-image: url(/img/chat.jpg);
-  
+}
+
+.dark-mode {
+     background-image: url(/img/chatDark.jpg);
 }
 
 .content {
