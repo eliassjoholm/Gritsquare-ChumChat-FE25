@@ -14,7 +14,7 @@ onAuthStateChanged(auth, (user) => {
     }
 });
 
-const hello = onValue(reference, snapshot => {
+onValue(reference, snapshot => {
     const data = snapshot.val();
 
     document.querySelector(".chat-container").innerHTML = "";  
@@ -23,10 +23,4 @@ const hello = onValue(reference, snapshot => {
     const users = data.users;
 
     RenderMessages(users, messages)
-    console.log(messages)
 })
-
-onValue(messagesRef, snapshot => {
-    hello();
-})
-

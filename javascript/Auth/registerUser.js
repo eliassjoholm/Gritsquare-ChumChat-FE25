@@ -14,20 +14,22 @@ formBody.addEventListener("submit", async(e) => {
 
     const email = formData.get("email");
     const password = formData.get("password");
+    const username = formData.get("username");
     const pfpurl = formData.get("pfp-url");
 
     console.log(email);
 
     const userId = await createUserWithEmailAndPassword(auth, email, password)
 
-    registerUser(await userId.user.uid, pfpurl)
+    registerUser(await userId.user.uid, username, pfpurl)
 });
 
-const registerUser = (userId, pfpUrl) => {
+const registerUser = (userId, username, pfpUrl) => {
     const newUser = push(usersRef);
 
     const userData = {
         user_id: userId,
+        username: username,
         role: "visitor",
         img: pfpUrl,
     }
