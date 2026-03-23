@@ -30,7 +30,7 @@ export const RenderNav = () => {
             userArea.appendChild(link);
             userArea.appendChild(logoutBtn); 
         } else {
-            link.href = "/Gritsquare-ChumChat-FE25/html/register.html";
+            link.href = "Gritsquare-ChumChat-FE25/html/login.html";
             link.textContent = "Register/Logga in";
             link.className = "register-link";
 
