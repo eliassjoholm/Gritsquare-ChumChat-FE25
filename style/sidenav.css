@@ -12,7 +12,7 @@
     width: 100px;
    background: 
         linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-        url(/img/chat.jpg);
+        url(../img/chat.jpg);
     padding: 20px;
     height: 200vh;
     display: flex; 
@@ -52,3 +52,4 @@
     background-color: #2e7d32;
     color: white;
 }
+
