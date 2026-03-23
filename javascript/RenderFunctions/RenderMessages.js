@@ -20,7 +20,6 @@ export const RenderMessages = async (usersObject, messagesObject, replyObject) =
 
                 const nextNest = nestAmount + 1;
 
-
                 if (replySender) {
                     RenderMessageBox(replySender, reply, reply.message_id, nextNest);
                 } else {

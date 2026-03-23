@@ -12,6 +12,10 @@ export const RenderMessageBox = async (sender, message, messageKey, nestAmount =
     ChatBox.className = "chat-box";
     ChatBox.classList.add(nestAmount);
 
+    console.log(nestAmount)
+
+    ChatBox.style.marginLeft = `${nestAmount * 50}px`;
+
 
     const ChatBoxSender = document.createElement("h2");
     ChatBoxSender.textContent = sender.username;
