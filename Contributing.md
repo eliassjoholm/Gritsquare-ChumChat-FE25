@@ -1,7 +1,7 @@
 # Contributing to ChumChat
 
 Thank you for your interest in contributing to ChumChat!  
-Before starting, please contact me on Discord: **Andi-OnlyPants**.
+Before starting, please contact me on Discord: **andionlyfans**.
 
 
 ## File Structure Guidelines

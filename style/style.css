@@ -3,6 +3,8 @@
     padding: 0;
 }
 
+
+
 :root{
     --font-one: "Inter", sans-serif;
     --colorOne: #00A86B;
@@ -29,6 +31,7 @@ nav {
     list-style: none;
     display: flex;
     gap: 20px;
+    
     
 }
 
