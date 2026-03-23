@@ -10,7 +10,6 @@ A simple real-time chat application where users can send messages to each other.
 * Real-time messaging
 * Chat rooms
 * Send images in the "memes" chat
-* Active users list
 * Responsive design (mobile & desktop)
 
 ---

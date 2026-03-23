@@ -2,7 +2,7 @@ import { reference, db, messagesRef, repliesRef } from "./firebase.js";
 import { push, set, onValue, remove, ref, get } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-database.js";
 
 export const sendMessage = (text) => {
-    if (!currentUser) return alert("Log in first dumbass!");
+    if (!currentUser) return alert("Log in first!");
     const newMsg = push(messagesRef);
 
     const messageData = {
