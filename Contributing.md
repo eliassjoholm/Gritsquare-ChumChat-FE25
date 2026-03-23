@@ -17,7 +17,7 @@ Before starting, please contact me on Discord: **Andi-OnlyPants**.
 
 ---
 
-## Features We Need
+## Features ChumChant Need
 
 - [ ] Like/Dislike system for posts and answers  
 - [ ] Emoji reactions 
@@ -26,7 +26,7 @@ If you have other ideas, please contact me.
 
 ---
 
-## Features We Want
+## Features ChumChant want
 
 - [ ] Filter for inappropriate or bad words  
 - [ ] Custom cursor 
