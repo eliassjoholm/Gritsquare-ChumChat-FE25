@@ -21,7 +21,7 @@ logoutBtn.addEventListener("click", () => {
 
 export const RenderNav = () => {
     onAuthStateChanged(auth, (user) => {
-        userArea.innerHTML = ""; // Rensa först
+        userArea.innerHTML = "";
 
         if (user) {
             link.textContent = `${user.email}`;
@@ -30,7 +30,7 @@ export const RenderNav = () => {
             userArea.appendChild(link);
             userArea.appendChild(logoutBtn); 
         } else {
-            link.href = "/html/register.html";
+            link.href = "/Gritsquare-ChumChat-FE25/html/login.html";
             link.textContent = "Register/Logga in";
             link.className = "register-link";
 

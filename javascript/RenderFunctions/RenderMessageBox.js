@@ -24,7 +24,6 @@ export const RenderMessageBox = async (sender, message, messageKey) => {
 
     ChatBox.append(UserInfo);
 
-    console.log(user.uid);
     console.log(message.user_id);
 
     if (user) {
