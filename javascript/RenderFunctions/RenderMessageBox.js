@@ -2,8 +2,10 @@ import {deleteMessage} from "../MessageFunctions/deleteMessage.js";
 import {auth} from "../firebase.js";
 import { sendReply } from "../MessageFunctions/sendReply.js";
 import { censorBadWords } from "../function/censor.js";
+import { toggleLike } from "../MessageFunctions/likeMessage.js";
+import { toggleFavorite } from "../MessageFunctions/favoriteMessage.js";
 
-export const RenderMessageBox = async (sender, message, messageKey, nestAmount = 0) => {
+export const RenderMessageBox = async (sender, message, messageKey, nestAmount = 0, isLiked, isFav) => {
     const user = auth.currentUser;
 
     const ChatContainer = document.querySelector(".chat-container");
@@ -74,6 +76,41 @@ export const RenderMessageBox = async (sender, message, messageKey, nestAmount =
 
 ChatBox.append(ChatBoxMessage, TimeStamp);
 
+// Like & favorite features
+const actionBar = document.createElement('div');
+actionBar.className = 'action-bar';
+
+const likeBtn = document.createElement('button');
+likeBtn.className = `like-btn ${isLiked ? "active" : ""}`;
+likeBtn.innerHTML = `<svg class="icon heart" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        <span class="like-count">${message.likes || 0}</span>`;
+
+const favBtn = document.createElement('button');
+favBtn.className = `fav-btn ${isFav ? "active" : ""}`;
+favBtn.innerHTML = `<svg class="icon star" viewBox="0 0 24 24">
+    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+    </svg>
+`;
+
+likeBtn.addEventListener("click", () => {
+    if (!user) {
+        alert("Du behöver logga in för att gilla inlägg!");
+        return;
+    }
+    toggleLike(messageKey, isLiked);
+});
+
+favBtn.addEventListener("click", () => {
+    if (!user) {
+        alert("Du behöver logga in för att spara favoriter!");
+        return;
+    }
+    toggleFavorite(messageKey, isFav);
+});
+
+actionBar.append(likeBtn, favBtn);
+ChatBox.append(actionBar);
+
 
 if (nestAmount >= 5) {
     const limitText = document.createElement("p");
@@ -113,4 +150,4 @@ if (nestAmount >= 5) {
 
 
 ChatContainer.appendChild(ChatBox);
-} 
+}

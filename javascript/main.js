@@ -19,12 +19,14 @@ onAuthStateChanged(auth, (user) => {
 
 onValue(reference, snapshot => {
     const data = snapshot.val();
+    const user = auth.currentUser
 
     document.querySelector(".chat-container").innerHTML = "";
 
     const messages = data.messages;
     const users = data.users;
     const replies = data.replies;
+    const currentUser = user ? users[user.uid] : null;
 
-    RenderMessages(users, messages, replies)
+    RenderMessages(users, messages, replies, currentUser);
 })

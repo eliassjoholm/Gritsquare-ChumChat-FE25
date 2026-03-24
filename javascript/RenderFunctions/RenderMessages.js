@@ -1,7 +1,9 @@
 import {RenderMessageBox} from "./RenderMessageBox.js";
 import {auth} from "../firebase.js";
 
-export const RenderMessages = async (usersObject, messagesObject, replyObject) => {
+export const RenderMessages = async (usersObject, messagesObject, replyObject, currentUser) => {
+
+    const user = auth.currentUser
 
     const checkForReply = (messageId, nestAmount) => {
         console.log("checking for reply")
@@ -20,10 +22,13 @@ export const RenderMessages = async (usersObject, messagesObject, replyObject) =
 
                 const nextNest = nestAmount + 1;
 
+                const isLiked = currentUser?.likedPosts?.[replyKey] || false;
+                const isFav = currentUser?.favorites?.[replyKey] || false;
+
                 if (replySender) {
-                    RenderMessageBox(replySender, reply, reply.message_id, nextNest);
+                    RenderMessageBox(replySender, reply, reply.message_id, nextNest, isLiked, isFav);
                 } else {
-                    RenderMessageBox({ username: "Unknown", img: "" }, reply, reply.message_id, nextNest);
+                    RenderMessageBox({ username: "Unknown", img: "" }, reply, reply.message_id, nextNest, isLiked, isFav);
                 }
 
                 checkForReply(reply.message_id, nestAmount + 1);
@@ -54,11 +59,14 @@ export const RenderMessages = async (usersObject, messagesObject, replyObject) =
             (u) => u.user_id === messageElement.user_id,
         );
 
+        const isLiked = currentUser?.likedPosts?.[messageKey] || false;
+        const isFav = currentUser?.favorites?.[messageKey] || false;
+
         if (messageSender) {
             console.log(`Render-message: ${messageKey} från ${messageSender.username}`);
-            RenderMessageBox(messageSender, messageElement, messageKey, 0);
+            RenderMessageBox(messageSender, messageElement, messageKey, 0, isLiked, isFav);
         } else {
-            RenderMessageBox({ username: "Unknown", img: "" }, messageElement, messageKey, nestAmount);
+            RenderMessageBox({ username: "Unknown", img: "" }, messageElement, messageKey, nestAmount, isLiked, isFav);
         }
 
         checkForReply(messageElement.message_id, 0);

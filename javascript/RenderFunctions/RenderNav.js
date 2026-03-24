@@ -28,7 +28,7 @@ export const RenderNav = () => {
             link.href = "#";
 
             userArea.appendChild(link);
-            userArea.appendChild(logoutBtn); 
+            userArea.appendChild(logoutBtn);
         } else {
             link.href = "./html/login.html";
             link.textContent = "Register/Logga in";
