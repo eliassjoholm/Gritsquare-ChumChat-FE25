@@ -20,11 +20,12 @@ Before starting, please contact me on Discord: **andionlyfans**.
 - [X] Like/Favorite system for posts and answers  
 - [X] Emoji reactions 
 - [X] Make a sound when you send a message
+- [X] Custom sound when sending a message 
+- [X] Add a terms of service
 - [ ] Post picture in the chat
-- [ ] Make it so user can't send vulnerable code
 - [ ] Add a second chat room
-- [ ] Add a terms of service
-- [ ] Custom sound when sending a message 
+
+
 
 If you have other ideas, please contact me.
 
@@ -34,5 +35,6 @@ If you have other ideas, please contact me.
 - [ ] Custom cursor 
 - [X] Bot Check
 - [X] Translate
+- [X] Make it so user can't send vulnerable code
 
 If you have other ideas, feel free to contact me.
