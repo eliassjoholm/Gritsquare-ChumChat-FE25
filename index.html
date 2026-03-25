@@ -8,6 +8,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script type="module" src="javascript/emoji.js"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
@@ -39,28 +40,39 @@
 
     </nav>
 
-    <main class="main" id="main">
-       
+<main class="main" id="main">
+    <div class="content">
+        <div class="send-chat-container">
+            <form class="send-message" id="form-post">
+                
+               <select id="emoji-select">
+                <option value="😀">😀</option>
+                <option value="😂">😂</option>
+                <option value="😍">😍</option>
+                <option value="👍">👍</option>
+                <option value="🔥">🔥</option>
+                <option value="🚀">🚀</option>
+                </select>
 
-        <div class="content">
-            <div class="send-chat-container">
-                <form class="send-message" id="form-post">
-                    <input placeholder="Skriv ett meddelande..." type="text" name="message" class="message-area" />
+
+                <div style="display: flex; gap: 5px;">
+                    <input placeholder="Write a message..." type="text" name="message" class="message-area" id="message-input" style="flex-grow: 1;" />  
                     <button type="submit" class="chat-send-button">Send</button>
-                </form>
-            </div>
-
-            <div class="chat-container"></div>
+                </div>
+            </form>
         </div>
-    </main>
+
+        <div class="chat-container"></div>
+    </div>
+</main>
 
     <footer class="footer">
         <div id="weather-container">
             <h3 id="headerForWeather"></h3>
         </div>
         <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="html/about.html">About</a></li>
+            <li><a href="html/contact.html">Contact</a></li>
              <li><a href="#">ROM1</a></li> 
            <li><a href="#">MEMES</a></li> 
         </ul>
@@ -72,6 +84,7 @@
     <script type="module" src="./javascript/function/translate.js"></script>
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+    <script type="module" src="javascript/function/confarmation.js"></script>
 </body>
 
 </html>

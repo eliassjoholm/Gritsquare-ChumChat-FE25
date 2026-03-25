@@ -3,7 +3,7 @@ import { push, set, onValue, remove, ref, get } from "https://www.gstatic.com/fi
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
 import { RenderNav } from "./RenderFunctions/RenderNav.js";
 import { RenderMessages } from "./RenderFunctions/RenderMessages.js"
-import { renderWeatherData } from "./RenderFunctions/RenderWeatherData.js";
+import { renderWeatherData } from "./function/RenderWeatherData.js";
 
 RenderNav();
 

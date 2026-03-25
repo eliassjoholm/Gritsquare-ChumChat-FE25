@@ -7,7 +7,7 @@ export const sendReply = async (messageKey, text = "") => {
     if (!user) return alert("Logga in först!");
 
     if (!text || !text.trim()) {
-        return alert("Skriv ett svar först.");
+         return alert("Write an answer first");
     }
 
     let safeMessage = text;

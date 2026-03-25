@@ -3,6 +3,7 @@ import { push, set } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-d
 import { setCurrentUser } from "./auth.js";
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
 import { auth } from "../firebase.js";
+import { renderWeatherData } from "../function/RenderWeatherData.js";
 
 const formBody = document.querySelector(".form-body");
 
@@ -16,18 +17,18 @@ formBody.addEventListener("submit", async (e) => {
     const pfpurl = formData.get("pfp-url");
 
     try {
-       
+
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         const userId = userCredential.user.uid;
 
-      
+
         await registerUser(userId, username, pfpurl);
 
-      
+
         window.location.href = "../index.html";
     } catch (error) {
         console.error("Error creating user:", error);
-        alert(error.message); 
+        alert(error.message);
     }
 });
 
@@ -42,5 +43,7 @@ const registerUser = async (userId, username, pfpUrl) => {
     };
 
     await set(newUser, userData);
-    setCurrentUser(newUser); 
+    setCurrentUser(newUser);
 };
+
+renderWeatherData();

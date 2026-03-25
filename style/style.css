@@ -10,8 +10,8 @@
   --colorThree: #f2eae0;
   --colorFour: #ffffff;
 }
-/* NAVBAR */
 
+/* NAVBAR */
 nav {
   display: flex;
   justify-content: space-between;
@@ -60,6 +60,7 @@ nav {
   display: flex;
   flex-direction: row;
   background-image: url(../img/chat.jpg);
+  min-height: 100vh;
 }
 
 .content {
@@ -131,13 +132,13 @@ nav {
 }
 
 .chat-box {
-  width: 90%;
-  max-width: 320px;
+  width: 30%;
   background: var(--colorOne);
   border-radius: 30px;
-  padding: 25px;
+  padding: 10px;
   position: relative;
-  margin: 50px auto;
+  text-align: center;
+  margin: 20px;
   color: var(--colorFour);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
@@ -147,13 +148,17 @@ nav {
   align-items: center;
   gap: 15px;
   font-family: var(--font-one);
-  font-size: 1rem;
 }
 
 .comments-chat {
   margin: 20px 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.4;
+}
+
+.chat-box-username{
+  font-family: var(--font-one);
+  font-size: 2rem;
 }
 
 .profile-picture {
@@ -175,7 +180,6 @@ nav {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: red;
   color: var(--colorFour);
   border: none;
   border-radius: 100px;
@@ -226,6 +230,8 @@ nav {
   cursor: pointer;
   transition: 0.3s;
 }
+/* CHATBOX */
+
 
 /* Like & favorite */
 .action-bar {
@@ -266,7 +272,7 @@ nav {
 /* FOOTER */
 
 .footer {
-  width: 100%;
+  max-width: 100%;
   background-color: var(--colorOne);
   color: var(--colorFour);
   text-align: center;
@@ -342,6 +348,16 @@ nav {
     border-radius: 8px;
     z-index: 100;
   }
+
+  .footer{
+     max-width: 100%;
+  }
+
+  .chat-box{
+    width: 90%;
+  
+  }
+
 
   .menu.active {
     display: flex;

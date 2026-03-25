@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-one: "Inter", sans-serif;
+
+  --colorOne: #00a86b;
+  --colorTwo: #000000;
+  --colorThree: #f2eae0;
+  --colorFour: #ffffff;
+}
+
+
+.container {
+  width: 100%;
+  height: 100vh;
+  margin: auto; /* centrerar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background: url(/img/chat.jpg);
+  justify-content: center;
+}
+
+.boxcontact {
+  background: linear-gradient(135deg, var(--colorOne), var(--colorThree));
+  padding: 40px;
+  border-radius: 12px;
+}
+
+h1 {
+  font-family: var(--font-one);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--colorFour);
+}
+
+p {
+  font-family: var(--font-one);
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+  color: var(--colorFour);
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--colorFour);
+  padding: 10px 5px;
+  background: transparent;
+  font-size: 14px;
+  outline: none;
+}
+
+.full {
+  grid-column: span 2;
+  color: var(--colorFour);
+  
+}
+
+button {
+  grid-column: span 2;
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid #333;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+@media (max-width: 600px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .full,
+  button {
+    grid-column: span 1;
+  }
+}

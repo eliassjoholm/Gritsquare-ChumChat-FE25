@@ -1,5 +1,6 @@
 import { auth } from "../firebase.js";
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
+import { renderWeatherData } from "../function/RenderWeatherData.js";
 
 const formBody = document.querySelector(".form-body");
 
@@ -22,3 +23,5 @@ formBody.addEventListener("submit", async (e) => {
         console.error("Fel vid inloggning:", error.message);
     }
 });
+
+renderWeatherData();
