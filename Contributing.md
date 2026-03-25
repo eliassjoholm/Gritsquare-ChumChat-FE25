@@ -17,7 +17,7 @@ Before starting, please contact me on Discord: **andionlyfans**.
 
 ## Features ChumChat Need
 - [X] Filter for inappropriate or bad words 
-- [X] Like/Dislike/Favorite system for posts and answers  
+- [X] Like/Favorite system for posts and answers  
 - [X] Bot Check
 - [X] Emoji reactions 
 - [ ] Post picture in the chat
