@@ -1,0 +1,101 @@
+/* Images page styles (image-specific CSS only) */
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 15px;
+}
+
+.chat-box {
+  width: 30%;
+  max-width: 380px;
+  background: var(--colorOne);
+  border-radius: 30px;
+  padding: 12px;
+  margin: 12px;
+  position: relative;
+  text-align: center;
+  color: var(--colorFour);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.chat-box-username {
+  font-family: var(--font-one);
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.chat-user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rendered-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.timestamp {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 8px 10px;
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  width: 100%;
+}
+
+.action-bar {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  width: 100%;
+}
+
+.action-bar button {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.15);
+  color: var(--colorFour);
+  cursor: pointer;
+}
+
+.action-bar button.active {
+  background: rgba(0, 168, 107, 0.45);
+}
+
+.message-area {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 12px 15px;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-family: var(--font-one);
+  background: #f7f7f7;
+  transition: all 0.2s ease;
+}
+
+.message-area:focus {
+  background: var(--colorFour);
+  box-shadow: 0 0 0 2px rgba(0, 168, 107, 0.2);
+}

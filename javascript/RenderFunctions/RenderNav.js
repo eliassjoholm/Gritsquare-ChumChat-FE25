@@ -30,7 +30,7 @@ export const RenderNav = () => {
             userArea.appendChild(link);
             userArea.appendChild(logoutBtn);
         } else {
-            link.href = "./html/login.html";
+            link.href = "/html/login.html";
             link.textContent = "Register/Logga in";
             link.className = "register-link";
 

@@ -4,6 +4,7 @@ import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.10.0/f
 import { RenderNav } from "./RenderFunctions/RenderNav.js";
 import { RenderMessages } from "./RenderFunctions/RenderMessages.js"
 import { renderWeatherData } from "./function/RenderWeatherData.js";
+import { RenderImages } from "./RenderFunctions/renderimages.js";
 
 RenderNav();
 
@@ -21,12 +22,18 @@ onValue(reference, snapshot => {
     const data = snapshot.val();
     const user = auth.currentUser
 
-    document.querySelector(".chat-container").innerHTML = "";
+    const chatContainer = document.querySelector(".chat-container");
+    if (chatContainer) chatContainer.innerHTML = "";
+
+    const imageContainer = document.querySelector(".image-container");
+    if (imageContainer) imageContainer.innerHTML = "";
 
     const messages = data.messages;
     const users = data.users;
     const replies = data.replies;
+    const images = data.images;
     const currentUser = user ? users[user.uid] : null;
 
-    RenderMessages(users, messages, replies, currentUser);
+    if (chatContainer) RenderMessages(users, messages, replies, currentUser);
+    if (imageContainer) RenderImages(users, images, currentUser);
 })
